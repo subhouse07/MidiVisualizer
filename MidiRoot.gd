@@ -19,6 +19,6 @@ func _unhandled_input(event):
 	if event is InputEventMIDI:
 		match event.message:
 			MIDI_MESSAGE_NOTE_ON:
-				print("Note on")
+				get_child(event.channel).note_on(event.pitch, event.velocity)
 			MIDI_MESSAGE_NOTE_OFF:
-				print("Note off")
+				get_child(event.channel).note_off(event.pitch)
