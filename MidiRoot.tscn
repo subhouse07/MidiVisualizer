@@ -4,6 +4,8 @@
 [ext_resource path="res://ChannelBar.tscn" type="PackedScene" id=2]
 
 [node name="MidiRoot" type="Node2D"]
+position = Vector2( 0, 80 )
+scale = Vector2( 3, 3 )
 script = ExtResource( 1 )
 
 [node name="ChannelBar" parent="." instance=ExtResource( 2 )]
