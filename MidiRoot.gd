@@ -19,6 +19,7 @@ func _unhandled_input(event):
 	if event is InputEventMIDI:
 		match event.message:
 			MIDI_MESSAGE_NOTE_ON:
-				get_child(event.channel).note_on(event.pitch, event.velocity)
+				$NoteReceiver.status_on()
+				$ChannelBars.get_child(event.channel).note_on(event.pitch, event.velocity)
 			MIDI_MESSAGE_NOTE_OFF:
-				get_child(event.channel).note_off(event.pitch)
+				$ChannelBars.get_child(event.channel).note_off(event.pitch)

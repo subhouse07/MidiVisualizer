@@ -1,56 +1,69 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MidiRoot.gd" type="Script" id=1]
 [ext_resource path="res://ChannelBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://img/vis_bg.png" type="Texture" id=3]
+[ext_resource path="res://StatusReceiver.tscn" type="PackedScene" id=4]
 
 [node name="MidiRoot" type="Node2D"]
-position = Vector2( 0, 80 )
-scale = Vector2( 3, 3 )
 script = ExtResource( 1 )
 
-[node name="ChannelBar" parent="." instance=ExtResource( 2 )]
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( -32, -16 )
 
-[node name="ChannelBar2" parent="." instance=ExtResource( 2 )]
+[node name="XGReceiver" parent="." instance=ExtResource( 4 )]
+position = Vector2( 392, 39 )
+
+[node name="NoteReceiver" parent="." instance=ExtResource( 4 )]
+position = Vector2( 388, 61 )
+
+[node name="ChannelBars" type="Node" parent="."]
+
+[node name="ChannelBar" parent="ChannelBars" instance=ExtResource( 2 )]
+
+[node name="ChannelBar2" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 19, 0 )
 
-[node name="ChannelBar3" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar3" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 38, 0 )
 
-[node name="ChannelBar4" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar4" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 57, 0 )
 
-[node name="ChannelBar5" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar5" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 76, 0 )
 
-[node name="ChannelBar6" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar6" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 95, 0 )
 
-[node name="ChannelBar7" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar7" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 114, 0 )
 
-[node name="ChannelBar8" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar8" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 133, 0 )
 
-[node name="ChannelBar9" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar9" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 152, 0 )
 
-[node name="ChannelBar10" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar10" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 171, 0 )
 
-[node name="ChannelBar11" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar11" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 190, 0 )
 
-[node name="ChannelBar12" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar12" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 209, 0 )
 
-[node name="ChannelBar13" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar13" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 228, 0 )
 
-[node name="ChannelBar14" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar14" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 247, 0 )
 
-[node name="ChannelBar15" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar15" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 265, 0 )
 
-[node name="ChannelBar16" parent="." instance=ExtResource( 2 )]
+[node name="ChannelBar16" parent="ChannelBars" instance=ExtResource( 2 )]
 position = Vector2( 284, 0 )
