@@ -6,7 +6,7 @@ var on_texture = preload("res://img/status_on.png")
 var off_texture = preload("res://img/status_off.png")
 var cooldown = 0
 
-const TIMEOUT = 6
+const TIMEOUT = 10
 
 
 # Called when the node enters the scene tree for the first time.

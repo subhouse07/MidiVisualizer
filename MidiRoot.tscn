@@ -6,20 +6,21 @@
 [ext_resource path="res://StatusReceiver.tscn" type="PackedScene" id=4]
 
 [node name="MidiRoot" type="Node2D"]
+position = Vector2( 561, 367 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 centered = false
 offset = Vector2( -32, -16 )
 
-[node name="XGReceiver" parent="." instance=ExtResource( 4 )]
-position = Vector2( 392, 39 )
-
 [node name="NoteReceiver" parent="." instance=ExtResource( 4 )]
 position = Vector2( 388, 61 )
 
-[node name="ChannelBars" type="Node" parent="."]
+[node name="ChannelBars" type="Node2D" parent="."]
 
 [node name="ChannelBar" parent="ChannelBars" instance=ExtResource( 2 )]
 
