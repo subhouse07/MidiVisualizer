@@ -28,4 +28,5 @@ func _unhandled_input(event):
 # Called when going to the next track
 func reset():
 	sysex_on = true
+	$XGReceiver.stay_off()
 	$SysexReceiver.status_on()

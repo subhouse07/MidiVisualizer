@@ -1,0 +1,680 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://img/track_window.png" type="Texture" id=1]
+[ext_resource path="res://TrackListRoot.gd" type="Script" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[node name="TrackListRoot" type="Control"]
+anchor_left = 0.017
+anchor_top = 0.027
+anchor_right = 0.46
+anchor_bottom = 0.439
+margin_left = -17.408
+margin_top = -16.2
+margin_right = -471.04
+margin_bottom = -263.4
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 18.0
+margin_top = 17.0
+margin_right = 484.0
+margin_bottom = 263.0
+scroll_horizontal_enabled = false
+
+[node name="TrackGridContainer" type="GridContainer" parent="ScrollContainer"]
+margin_right = 449.0
+margin_bottom = 509.0
+rect_min_size = Vector2( 200, 200 )
+columns = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_right = 225.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Public Audio Theme"
+fit_content_height = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_right = 449.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 19.0
+margin_right = 225.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 19.0
+margin_right = 449.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 38.0
+margin_right = 225.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 38.0
+margin_right = 449.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 57.0
+margin_right = 225.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 57.0
+margin_right = 449.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 76.0
+margin_right = 225.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 76.0
+margin_right = 449.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 95.0
+margin_right = 225.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 95.0
+margin_right = 449.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel13" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 114.0
+margin_right = 225.0
+margin_bottom = 129.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel14" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 114.0
+margin_right = 449.0
+margin_bottom = 129.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel15" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 133.0
+margin_right = 225.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel16" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 133.0
+margin_right = 449.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel17" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 152.0
+margin_right = 225.0
+margin_bottom = 167.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel18" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 152.0
+margin_right = 449.0
+margin_bottom = 167.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel19" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 171.0
+margin_right = 225.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel20" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 171.0
+margin_right = 449.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel21" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 190.0
+margin_right = 225.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel22" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 190.0
+margin_right = 449.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel23" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 209.0
+margin_right = 225.0
+margin_bottom = 224.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel24" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 209.0
+margin_right = 449.0
+margin_bottom = 224.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel25" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 228.0
+margin_right = 225.0
+margin_bottom = 243.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel26" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 228.0
+margin_right = 449.0
+margin_bottom = 243.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel27" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 247.0
+margin_right = 225.0
+margin_bottom = 262.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel28" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 247.0
+margin_right = 449.0
+margin_bottom = 262.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel29" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 266.0
+margin_right = 225.0
+margin_bottom = 281.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel30" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 266.0
+margin_right = 449.0
+margin_bottom = 281.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel31" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 285.0
+margin_right = 225.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel32" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 285.0
+margin_right = 449.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel33" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 304.0
+margin_right = 225.0
+margin_bottom = 319.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel34" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 304.0
+margin_right = 449.0
+margin_bottom = 319.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel35" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 323.0
+margin_right = 225.0
+margin_bottom = 338.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel36" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 323.0
+margin_right = 449.0
+margin_bottom = 338.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel37" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 342.0
+margin_right = 225.0
+margin_bottom = 357.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel38" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 342.0
+margin_right = 449.0
+margin_bottom = 357.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel39" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 361.0
+margin_right = 225.0
+margin_bottom = 376.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel40" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 361.0
+margin_right = 449.0
+margin_bottom = 376.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel41" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 380.0
+margin_right = 225.0
+margin_bottom = 395.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel42" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 380.0
+margin_right = 449.0
+margin_bottom = 395.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel43" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 399.0
+margin_right = 225.0
+margin_bottom = 414.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel44" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 399.0
+margin_right = 449.0
+margin_bottom = 414.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel45" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 418.0
+margin_right = 225.0
+margin_bottom = 433.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel46" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 418.0
+margin_right = 449.0
+margin_bottom = 433.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel47" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 437.0
+margin_right = 225.0
+margin_bottom = 452.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel48" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 437.0
+margin_right = 449.0
+margin_bottom = 452.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel49" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 456.0
+margin_right = 225.0
+margin_bottom = 471.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel50" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 456.0
+margin_right = 449.0
+margin_bottom = 471.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel51" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 475.0
+margin_right = 225.0
+margin_bottom = 490.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel52" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 475.0
+margin_right = 449.0
+margin_bottom = 490.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
+
+[node name="RichTextLabel53" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_top = 494.0
+margin_right = 225.0
+margin_bottom = 509.0
+rect_min_size = Vector2( 225, 0 )
+rect_clip_content = false
+size_flags_horizontal = 2
+theme = SubResource( 1 )
+text = "Track 1"
+fit_content_height = true
+
+[node name="RichTextLabel54" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
+margin_left = 229.0
+margin_top = 494.0
+margin_right = 449.0
+margin_bottom = 509.0
+rect_min_size = Vector2( 220, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+bbcode_enabled = true
+bbcode_text = "[right]2:09[/right]"
+text = "2:09"
+fit_content_height = true
