@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MidiRoot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TrackListRoot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Root.gd" type="Script" id=3]
+[ext_resource path="res://Seekbar.tscn" type="PackedScene" id=4]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 3 )
@@ -14,5 +15,8 @@ margin_left = 530.0
 margin_top = 69.0
 margin_right = 530.0
 margin_bottom = 69.0
+
+[node name="Seekbar" parent="." instance=ExtResource( 4 )]
+position = Vector2( 530, 541 )
 
 [connection signal="next_track" from="TrackListRoot" to="." method="_on_TrackListRoot_next_track"]

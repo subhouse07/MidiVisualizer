@@ -5,18 +5,17 @@ var selected_index = 0
 const visible_track_count = 13
 const track_count = 27
 
-signal next_track
+signal next_track(total_seconds)
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	change_track_color(0, Color.green)
-	pass # Replace with function body.
-
+	emit_signal("next_track", parse_seconds())
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		highlight_next_track()
-		emit_signal("next_track")
+		emit_signal("next_track", parse_seconds())
 
 func highlight_next_track():
 	selected_index += 1
@@ -30,3 +29,9 @@ func change_track_color(child_index, color):
 	var track_container = $ScrollContainer/TrackGridContainer
 	track_container.get_child(child_index).add_color_override("default_color", color)
 	track_container.get_child(child_index + 1).add_color_override("default_color", color)
+
+func parse_seconds():
+	var text = $ScrollContainer/TrackGridContainer.get_child(selected_index * 2 + 1).text
+	var minutes = int(text[0])
+	var seconds = int(text.substr(2,2))
+	return minutes * 60 + seconds
