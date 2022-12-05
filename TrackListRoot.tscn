@@ -110,7 +110,7 @@ fit_content_height = true
 
 [node name="RichTextLabel7" type="RichTextLabel" parent="ScrollContainer/TrackGridContainer"]
 margin_top = 61.0
-margin_right = 275.0
+margin_right = 225.0
 margin_bottom = 76.0
 rect_min_size = Vector2( 225, 0 )
 size_flags_horizontal = 2

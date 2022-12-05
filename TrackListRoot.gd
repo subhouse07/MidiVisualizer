@@ -30,6 +30,7 @@ func change_track_color(child_index, color):
 	track_container.get_child(child_index).add_color_override("default_color", color)
 	track_container.get_child(child_index + 1).add_color_override("default_color", color)
 
+# Fix the crash that happens when we reach the end of the track list
 func parse_seconds():
 	var text = $ScrollContainer/TrackGridContainer.get_child(selected_index * 2 + 1).text
 	var minutes = int(text[0])

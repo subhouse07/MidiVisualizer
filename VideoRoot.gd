@@ -1,15 +1,15 @@
 extends Node2D
 
 var ogv_resources = [
-	preload("res://ogv/bitsbytescomp_libtheora.ogv"),
-	preload("res://ogv/commute_people_libtheora.ogv"),
+	preload("res://ogv/paconfet_libtheora.ogv"),
+	preload("res://ogv/mytraffic_libtheora.ogv"),
 	preload("res://ogv/indiaoffice_libtheora.ogv"),
-	preload("res://ogv/bitsbytescomp_libtheora.ogv"),
+	preload("res://ogv/mayor_libtheora.ogv"),
 	preload("res://ogv/shutocar_libtheora.ogv"),
 	preload("res://ogv/stevetaylor_libtheora.ogv"),
 	preload("res://ogv/bldgcrane_libtheora.ogv"),
 	preload("res://ogv/bitsbytescomp_libtheora.ogv"),
-	preload("res://ogv/domefall2_libtheora.ogv"),
+	preload("res://ogv/domefall1_libtheora.ogv"),
 	preload("res://ogv/wave_libtheora.ogv"),
 	preload("res://ogv/bldgclouds_libtheora.ogv"),
 	preload("res://ogv/bitsbytesgfx_libtheora.ogv"),
@@ -17,7 +17,7 @@ var ogv_resources = [
 	preload("res://ogv/bitsbytesman_libtheora.ogv"),
 	preload("res://ogv/mysterycomputer_libtheora.ogv"),
 	preload("res://ogv/shuto_libtheora.ogv"),
-	preload("res://ogv/bitsbytescomp_libtheora.ogv"),
+	preload("res://ogv/mayor_libtheora.ogv"),
 	preload("res://ogv/wave_sunset_libtheora.ogv"),
 	preload("res://ogv/sunsetboat_libtheora.ogv"),
 	preload("res://ogv/domeroof_libtheora.ogv"),
