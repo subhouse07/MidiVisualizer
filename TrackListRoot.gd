@@ -2,7 +2,7 @@ extends Control
 
 var selected_index = 0
 
-const visible_track_count = 13
+const visible_track_count = 11
 const track_count = 27
 
 signal next_track(total_seconds)
