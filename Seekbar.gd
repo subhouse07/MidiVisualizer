@@ -3,6 +3,8 @@ extends Node2D
 var total_time = 0
 var current_time = 0
 
+signal play_clicked
+
 func start(total_time):
 	$PauseSprite.visible = true
 	self.total_time = total_time
@@ -31,3 +33,8 @@ func _on_Timer_timeout():
 	else:
 		updateTime()
 	
+
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		emit_signal("play_clicked")

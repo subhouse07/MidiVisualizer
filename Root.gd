@@ -11,3 +11,7 @@ func _on_TrackListRoot_next_track(seconds):
 	$Seekbar.reset()
 	$Seekbar.start(seconds)
 
+
+
+func _on_Seekbar_play_clicked():
+	$Seekbar.start($TrackListRoot.parse_seconds())

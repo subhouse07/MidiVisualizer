@@ -20,3 +20,4 @@ margin_bottom = 69.0
 position = Vector2( 530, 541 )
 
 [connection signal="next_track" from="TrackListRoot" to="." method="_on_TrackListRoot_next_track"]
+[connection signal="play_clicked" from="Seekbar" to="." method="_on_Seekbar_play_clicked"]
