@@ -2,7 +2,7 @@ extends Control
 
 var selected_index = 0
 
-const visible_track_count = 11
+const visible_track_count = 13
 const track_count = 27
 
 signal next_track(total_seconds)
@@ -20,10 +20,10 @@ func _input(event):
 func highlight_next_track():
 	selected_index += 1
 	if selected_index < track_count:
-		change_track_color((selected_index - 1) * 2, Color.white)
+		change_track_color((selected_index - 1) * 2, Color("2b2b2b"))
 		change_track_color(selected_index * 2, Color("4CFF00"))
 		if selected_index >= visible_track_count:
-			$ScrollContainer.scroll_vertical += 19
+			$ScrollContainer.scroll_vertical += 17
 
 func change_track_color(child_index, color):
 	var track_container = $ScrollContainer/TrackGridContainer

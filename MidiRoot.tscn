@@ -2,7 +2,7 @@
 
 [ext_resource path="res://MidiRoot.gd" type="Script" id=1]
 [ext_resource path="res://ChannelBar.tscn" type="PackedScene" id=2]
-[ext_resource path="res://img/vis_bg.png" type="Texture" id=3]
+[ext_resource path="res://img/vis_bg_v2.png" type="Texture" id=3]
 [ext_resource path="res://StatusReceiver.tscn" type="PackedScene" id=4]
 [ext_resource path="res://img/sysxlabel.png" type="Texture" id=5]
 
@@ -22,7 +22,7 @@ position = Vector2( 388, 61 )
 position = Vector2( 392, 39 )
 
 [node name="SysexReceiver" parent="." instance=ExtResource( 4 )]
-position = Vector2( 384, 82 )
+position = Vector2( 383, 83 )
 
 [node name="ChannelBars" type="Node2D" parent="."]
 
@@ -74,5 +74,6 @@ position = Vector2( 265, 0 )
 position = Vector2( 284, 0 )
 
 [node name="Sprite2" type="Sprite" parent="."]
+visible = false
 position = Vector2( 358, 82 )
 texture = ExtResource( 5 )

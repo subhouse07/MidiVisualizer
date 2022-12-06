@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://VideoRoot.gd" type="Script" id=1]
-[ext_resource path="res://img/vid_window.png" type="Texture" id=2]
+[ext_resource path="res://img/vid_window_v2_sm.png" type="Texture" id=2]
 [ext_resource path="res://SideAnimation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://img/side_tile.png" type="Texture" id=4]
 
@@ -25,34 +25,34 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_left = 103.0
-margin_top = 16.0
-margin_right = 433.0
-margin_bottom = 264.0
+margin_left = 71.0
+margin_top = 15.0
+margin_right = 401.0
+margin_bottom = 265.0
 stream = SubResource( 1 )
 volume_db = -80.0
 
 [node name="Sprite2" type="Sprite" parent="."]
 material = SubResource( 3 )
-position = Vector2( 23, 16 )
-scale = Vector2( 0.975309, 0.992 )
+position = Vector2( 22, 15 )
+scale = Vector2( 0.604938, 1 )
 texture = ExtResource( 4 )
 centered = false
 
 [node name="Sprite3" type="Sprite" parent="."]
 material = SubResource( 3 )
-position = Vector2( 434, 16 )
-scale = Vector2( 0.975309, 0.992 )
+position = Vector2( 401, 15 )
+scale = Vector2( 0.604938, 1 )
 texture = ExtResource( 4 )
 centered = false
 flip_h = true
 
 [node name="SideAnimation" parent="." instance=ExtResource( 3 )]
-position = Vector2( 26, 27 )
+position = Vector2( 24, 49 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="SideAnimation2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 437, 26 )
+position = Vector2( 405, 49 )
 scale = Vector2( 0.8, 0.8 )
 
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

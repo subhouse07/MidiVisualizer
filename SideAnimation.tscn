@@ -37,20 +37,23 @@ animations = [ {
 [node name="SideAnimation" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 1 )
-frame = 2
+frame = 1
 playing = true
 centered = false
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 2 )
-frame = 1
 playing = true
 centered = false
-offset = Vector2( 0, 100 )
+offset = Vector2( 0, 148 )
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 3 )
+frame = 3
 playing = true
 centered = false
-offset = Vector2( 0, 199 )
+offset = Vector2( 0, 297 )
