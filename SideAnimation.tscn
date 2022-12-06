@@ -1,19 +1,56 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://img/h_1.png" type="Texture" id=1]
 [ext_resource path="res://img/h_2.png" type="Texture" id=2]
 [ext_resource path="res://img/h_0.png" type="Texture" id=3]
+[ext_resource path="res://img/amp_0.png" type="Texture" id=4]
+[ext_resource path="res://img/o_2.png" type="Texture" id=5]
+[ext_resource path="res://img/o_1.png" type="Texture" id=6]
+[ext_resource path="res://img/amp_1.png" type="Texture" id=7]
+[ext_resource path="res://img/o_0.png" type="Texture" id=8]
+[ext_resource path="res://img/amp_2.png" type="Texture" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 4.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
 } ]
 
 [node name="SideAnimation" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 3
+frame = 2
+playing = true
+centered = false
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+frame = 1
+playing = true
+centered = false
+offset = Vector2( 0, 100 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+playing = true
+centered = false
+offset = Vector2( 0, 199 )
