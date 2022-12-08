@@ -9,7 +9,7 @@ signal next_track(total_seconds)
 
 
 func _ready():
-	change_track_color(0, Color("4CFF00"))
+	change_track_color(0, Color.dodgerblue)
 #	emit_signal("next_track", parse_seconds())
 
 func _input(event):
@@ -21,7 +21,7 @@ func highlight_next_track():
 	selected_index += 1
 	if selected_index < track_count:
 		change_track_color((selected_index - 1) * 2, Color("2b2b2b"))
-		change_track_color(selected_index * 2, Color("4CFF00"))
+		change_track_color(selected_index * 2, Color.dodgerblue)
 		if selected_index >= visible_track_count:
 			$ScrollContainer.scroll_vertical += 17
 

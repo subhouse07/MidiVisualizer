@@ -3,9 +3,12 @@ extends Node2D
 
 const BAR_VAL = 7
 const COOLDOWN_SPEED = 300
+const NOTE_COOLDOWN_SPEED = 200
 
 var notes: Dictionary = {}
 var max_velocity = 0
+var note_on_cooldown = 0
+var note_on_cooling = false
 var cooldown = 0
 var cooling = false
 const off_textures = [
@@ -55,14 +58,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if notes.size() > 0:
-		var lit = max_velocity / BAR_VAL
+		var lit = ((max_velocity / BAR_VAL) / 2) + (note_cooldown_mod(delta) / 2)
 		light_notes(lit)
 	else:
-		var lit = cooldown / BAR_VAL
+		var lit = ((cooldown / BAR_VAL) / 2) + (note_cooldown_mod(delta) / 2)
 		if (cooling):
 			light_notes(lit)
 			cooling = lit > 0
-			cooldown = max(cooldown - floor(COOLDOWN_SPEED * delta), 0)
+			cooldown = calc_cooldown_update(cooldown, delta, COOLDOWN_SPEED)
 
 func light_notes(threshold):
 	for i in 16:
@@ -72,10 +75,13 @@ func light_notes(threshold):
 			$Sprites.get_child(i).texture = off_textures[i]
 
 func note_on(pitch, velocity):
+	note_on_cooling = true
 	notes[pitch] = velocity
+	note_on_cooldown = velocity
 #	velocity_sum += velocity
 	if velocity > max_velocity:
 		max_velocity = velocity
+
 
 func note_off(pitch):
 	var velocity = notes[pitch]
@@ -83,10 +89,23 @@ func note_off(pitch):
 	notes.erase(pitch)
 	if (notes.empty()):
 		cooling = true
-		cooldown = max_velocity
+		cooldown = max_velocity # I think this might be causing some of the weirdness
 	if max_velocity == velocity:
 		var new_max = 0
 		for v in notes:
 			if v >= new_max:
 				new_max = v
 		max_velocity = new_max
+
+func note_cooldown_mod(delta):
+	if note_on_cooling:
+		var cooldown_value = note_on_cooldown
+		note_on_cooldown = calc_cooldown_update(note_on_cooldown, delta, NOTE_COOLDOWN_SPEED)
+		if note_on_cooldown == 0:
+			note_on_cooling = false
+		return cooldown_value / BAR_VAL
+	else:
+		return 0
+
+func calc_cooldown_update(current, delta, speed):
+	return max(current - floor(speed * delta), 0)

@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://img/o_1_repeat.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+
+uniform vec2 direction = vec2(1.0, 0.0);
+uniform float xTrans = 0.0;
+uniform float oscSpeed = 0.0;
+uniform float freq = 0.0;
+
+void fragment() {
+//	COLOR = texture(TEXTURE, UV + (direction * 0.05*(TIME) + log(UV.x / UV.y)));
+//	COLOR = texture(TEXTURE, UV + (direction * 0.02*TIME + sin(pow(UV.x, 2.0)*0.1*TIME*UV.y)));
+//	COLOR = texture(TEXTURE, UV + direction * (xTrans+sin(smoothstep(UV.y, 1.0, 0.7)+TIME*oscSpeed)));
+	COLOR = texture(TEXTURE, UV + direction * (xTrans+sin(freq*UV.y+TIME*oscSpeed)));
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+shader_param/direction = Vector2( 1, 0 )
+shader_param/xTrans = 0.0
+shader_param/oscSpeed = 0.0
+shader_param/freq = 0.0
+
+[sub_resource type="StreamTexture" id=4]
+flags = 2
+load_path = "res://.import/side_tile.png-a6d8e2f9f84eb98bc381c3e188802a84.stex"
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 2 )
+shader_param/direction = Vector2( 0.02, 0 )
+shader_param/xTrans = 0.0
+shader_param/oscSpeed = 10.0
+shader_param/freq = 2.763
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+material = SubResource( 3 )
+position = Vector2( 4, 8 )
+scale = Vector2( 6.98765, 2.132 )
+texture = SubResource( 4 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="."]
+material = SubResource( 5 )
+position = Vector2( 2, 1 )
+scale = Vector2( 6.33708, 6.40476 )
+texture = ExtResource( 1 )
+centered = false
